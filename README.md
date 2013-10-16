@@ -20,6 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
+_Get token_
+
+	@token = SimpleEventickApi::Auth.authenticate 'email', 'password'
+
 _Get events of a user by token_
 
 	@events = SimpleEventickApi::Event.all token
