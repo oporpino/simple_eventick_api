@@ -1,8 +1,10 @@
 # SimpleEventickApi
+Everything is faster when it is simple!
 
-TODO: Write a gem description
+_This gem provider simple way to consummig eventick api_
 
-## Installation
+
+# Install
 
 Add this line to your application's Gemfile:
 
@@ -18,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+_Get events of a user by token_
+
+	@events = SimpleEventickApi::Event.all token
 
 ## Contributing
 
