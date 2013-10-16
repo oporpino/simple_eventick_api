@@ -1,6 +1,7 @@
 require "simple_eventick_api/version"
-require 'simple_eventick_api/base'
-require 'simple_eventick_api/event'
+require "simple_eventick_api/base"
+require "simple_eventick_api/event"
+require "simple_eventick_api/auth"
 
 module SimpleEventickApi
 
