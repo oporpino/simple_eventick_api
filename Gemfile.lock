@@ -1,11 +1,16 @@
 PATH
   remote: .
   specs:
-    simple_eventick_api (0.0.1)
+    simple_eventick_api (0.0.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.0)
+    multi_xml (0.5.5)
     rake (10.1.0)
 
 PLATFORMS
@@ -13,5 +18,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.3)
+  httparty
   rake
   simple_eventick_api!
