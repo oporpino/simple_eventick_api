@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_eventick_api (0.0.5)
+    simple_eventick_api (0.0.6)
 
 GEM
   remote: https://rubygems.org/
