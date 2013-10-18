@@ -10,6 +10,7 @@ module SimpleEventickApi
     # constructors
     def initialize(args={})
       links = args.delete('links')
+      
       args.each do |key, value|
         self.public_send("#{key}=", value)
       end
@@ -18,12 +19,8 @@ module SimpleEventickApi
     end
 
     def self.all (token)
-      opts = { 
-        basic_auth: {
-          username: token
-        }
-      }
-      response = get(opts)
+      
+      response = get(token)
 
       events = Array.new
       response['events'].map { |r| 
@@ -32,7 +29,6 @@ module SimpleEventickApi
       }
       events
     end
-
     
   end
 end

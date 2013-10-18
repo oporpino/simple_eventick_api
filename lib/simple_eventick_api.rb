@@ -2,6 +2,7 @@ require "simple_eventick_api/version"
 require "simple_eventick_api/base"
 require "simple_eventick_api/event"
 require "simple_eventick_api/auth"
+require "simple_eventick_api/attendee"
 
 module SimpleEventickApi
 
@@ -10,6 +11,8 @@ module SimpleEventickApi
   
   def self.get(resource, opts)
     url = "https://#{BASE_URL}/#{API_VERSION}/#{resource}.json"
+
+    puts "url: #{url}"
 
     response = HTTParty.get(url, opts)
     parse(response.body)
