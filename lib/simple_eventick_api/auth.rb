@@ -5,14 +5,14 @@ module SimpleEventickApi
     resource 'tokens'
 
     def self.authenticate (user, password)
-
+      
       opts = { 
         basic_auth: {
           username: user, 
           password: password
         }
       }
-      response = get(opts)
+      response = SimpleEventickApi.get(@resource, opts)
 
       response['token']
       rescue 
