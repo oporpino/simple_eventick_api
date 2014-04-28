@@ -27,6 +27,24 @@ _Get token_
 _Get events of a user by token_
 
 	@events = SimpleEventickApi::Event.all token
+	
+_Get attendees of a event_
+
+	#for getting all atendees without restrictions
+	@atendees = SimpleEventickApi::Atendee.all token, event_id
+	
+	or
+	
+	#for getting only attendees that checkin after this date
+	@atendees = SimpleEventickApi::Atendee.all token, event_id, check_at
+	
+_Find an especific atendee_
+
+	@atendee = SimpleEventickApi::Atendee.find token, event_id, id
+
+_Check-in an atendee_
+
+	@atendee = SimpleEventickApi::Atendee.check_in token, event_id, code, checked_at
 
 ## Contributing
 

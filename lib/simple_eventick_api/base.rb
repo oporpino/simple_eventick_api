@@ -5,12 +5,14 @@ module SimpleEventickApi
 	    @resource = res
 	  end
 
-	  def self.get(token)
+	  def self.get(token, more_opts = {})
 	  	opts = { 
         basic_auth: {
           username: token
         }
       }
+
+      opts = opts.merge(more_opts)
 
 	  	SimpleEventickApi.get(@resource, opts)
 	  end
